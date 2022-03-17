@@ -1,0 +1,51 @@
+/*============== font family ===============*/
+
+// normal font
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
+
+// special title
+@font-face {
+    font-family: HelloSanttiny;
+    src: url(../font/HelloSanttiny.ttf);
+    font-weight: 400;
+}
+
+// title font
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+// nav font
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+/*============== Configuration and helpers ===============*/
+@import "./abstracts/variables-structure";
+@import "./abstracts/functions";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+/*============== Base stuff ===============*/
+@import "./base/reset";
+@import "./base/animation";
+@import "./base/global";
+@import "./base/typography";
+
+/*============== Layout-related sections ===============*/
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/footer";
+
+/*============== Components ===============*/
+@import "./components/button";
+@import "./components/slider";
+@import "./components/forms";
+
+/*============== Page-specific styles ===============*/
+@import "./pages/home";
+@import "./pages/products";
+@import "./pages/product-details";
+@import "./pages/admin";
+
+/*============== Themes ===============*/
+@import "./themes/light";
+
+/*============== Utilities ===============*/
+@import "./base/utilities";

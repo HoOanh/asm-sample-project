@@ -1,0 +1,22 @@
+$bp-tablet: convertPxToEm(map-get($breakpoints, tablet));
+$bp-pc: convertPxToEm(map-get($breakpoints, pc));
+
+$font-size-text: map-get($typography, normal) * 1rem;
+
+// ----------------------------------------------------
+
+$primary-color: map-deep-get($color, _brand, "primary");
+
+$black-color: map-deep-get($color, _black, primary);
+$black2-color: map-deep-get($color, _black2, primary);
+$white-color: map-deep-get($color, _white, primary);
+$grey-color: map-deep-get($color, _grey, primary);
+$pink-color: map-deep-get($color, _pink, primary);
+
+$text-color: map-deep-get($color, _text, primary);
+
+:root {
+  --font-family-normal: "Quicksand", sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-nav: "Oswald", sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-title: "Libre Baskerville", sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+}

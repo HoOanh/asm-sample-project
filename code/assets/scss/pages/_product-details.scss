@@ -1,0 +1,211 @@
+.product-details {
+    margin-top: 10rem;
+
+    & .row {
+        grid-gap: 10rem;
+        padding-bottom: 10rem;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-width: 56rem;
+
+        & img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    &__text {
+        position: relative;
+
+        &-title {
+            & .small-title {
+                margin-top: 1rem;
+
+                font-size: 3rem;
+            }
+            & ul {
+                display: flex;
+
+                & li {
+                    position: relative;
+                    margin-right: 3rem;
+                    margin-top: 1.5rem;
+
+                    font-size: 1.4rem;
+
+                    &::after {
+                        content: "|";
+                        position: absolute;
+                        top: 0;
+                        right: -1.5rem;
+                    }
+
+                    &:last-child::after {
+                        display: none;
+                    }
+
+                    & .rating i {
+                        color: #ecba0b;
+                    }
+                }
+            }
+        }
+
+        &-price {
+            position: absolute;
+            top: 2rem;
+            right: 0;
+
+            font-size: 3rem;
+            font-weight: 600;
+            color: $pink-color;
+        }
+
+        &-widget {
+            margin: 4rem 0;
+
+            & li {
+                margin-top: 0.5rem;
+                font-size: 1.6rem;
+                color: $black2-color;
+
+                & span {
+                    color: $black-color;
+                }
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        overflow: hidden;
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        padding: 5rem 0;
+        margin-bottom: 4rem;
+
+        & .pro-qty {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 170px;
+            height: 50px;
+            border: 1px solid #e1e1e1;
+            border-radius: 50px;
+            padding: 0 25px;
+
+            & span {
+                font-size: 24px;
+                color: #888;
+                height: 100%;
+                line-height: 40px;
+                cursor: pointer;
+            }
+
+            & input {
+                font-size: 20px;
+                color: #111;
+                font-weight: 700;
+                text-align: center;
+                border: none;
+                outline: none;
+                background: transparent;
+                width: 94px;
+                height: 48px;
+            }
+        }
+
+        & .add_btn {
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: #111;
+            position: relative;
+            padding: 14px 30px 12px 70px;
+            border-radius: 50px;
+            margin: 0 16px;
+            line-height: 1.75;
+
+            & span {
+                position: absolute;
+                left: -1px;
+                top: 0;
+                height: 100%;
+                padding: 0 16px;
+                background: $pink-color;
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        & .heart_btn {
+            padding: 15px 14px;
+            background: #f2f2f2;
+            border-radius: 50%;
+        }
+    }
+
+    &__desc {
+        & .nav-tab {
+            display: flex;
+
+            & .nav-item {
+                position: relative;
+                margin-right: 3rem;
+
+                &::after {
+                    content: "/";
+                    position: absolute;
+                    bottom: 0;
+                    right: -2rem;
+                    font-size: 1.8rem;
+                    line-height: 3rem;
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
+            }
+
+            & .nav-link {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 30px;
+
+                color: $black2-color;
+
+                &.active {
+                    color: $black-color;
+                }
+            }
+        }
+    }
+
+    & .tab-pane {
+        display: none;
+
+        & p {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.related-product {
+    margin-top: 10rem;
+
+    text-align: center;
+}

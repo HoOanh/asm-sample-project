@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+    min-height: 9rem;
+    background-color: $white-color;
+
+    @include flex(row, null, center);
+
+    &__logo {
+        z-index: 0;
+        margin-left: 1.5rem;
+        max-width: 16rem;
+        width: 45%;
+
+        @include screen($bp-pc) {
+            width: 25%;
+        }
+
+        & img {
+            width: 100%;
+        }
+
+        @include screen($bp-pc) {
+            margin-left: 7rem;
+            max-width: inherit;
+
+            & img {
+                width: inherit;
+            }
+        }
+    }
+}
+
+.small-hero {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+
+    text-align: center;
+
+    background-image: url(../images/background/breadcrumb-bg.webp);
+    background-size: cover;
+    background-position: top center;
+}

@@ -1,0 +1,334 @@
+.admin {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    & .contain {
+        position: relative;
+        width: 100%;
+    }
+}
+
+// main
+
+.main_ {
+    position: absolute;
+    left: 30rem;
+    width: calc(100% - 30rem);
+    min-height: 100vh;
+
+    background: $white-color;
+    transition: 0.5s;
+
+    &.active {
+        width: calc(100% - 8rem);
+        left: 8rem;
+    }
+}
+
+.topbar {
+    @include flex(row, space-between, center);
+
+    width: 100%;
+    height: 8rem;
+    padding: 0 1rem;
+}
+
+.toggle {
+    position: relative;
+    @include flex(row, center, center);
+
+    @include size(6rem);
+
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+    width: 40rem;
+    margin: 0 1rem;
+
+    & label {
+        position: relative;
+        width: 100%;
+
+        & input {
+            width: 100%;
+            height: 4rem;
+            padding: 0.5rem 2rem;
+            padding-left: 3.5rem;
+
+            outline: none;
+            border-radius: 4rem;
+            border: 1px solid $black-color;
+
+            font-size: 1.75em;
+        }
+
+        & i {
+            position: absolute;
+            left: 1rem;
+
+            font-size: 1.4em;
+            line-height: 3;
+        }
+    }
+}
+
+.user {
+    position: relative;
+
+    @include size(5rem);
+    margin-right: 5rem;
+    border-radius: 50%;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include size(100%);
+        object-fit: cover;
+    }
+}
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+
+    & .card {
+        position: relative;
+
+        @include flex(row, space-between);
+        padding: 3rem;
+
+        border-radius: 2rem;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+
+        background: $white-color;
+        cursor: pointer;
+
+        & .numbers {
+            position: relative;
+
+            font-size: 3.5em;
+            font-weight: 700;
+            color: $pink-color;
+        }
+
+        & .cardName {
+            margin-top: 0.5rem;
+
+            color: $black2-color;
+            font-size: 2.1em;
+        }
+
+        & i {
+            font-size: 4.5em;
+            color: $black2-color;
+        }
+
+        &:hover {
+            background: $pink-color;
+
+            & .numbers,
+            & .cardName,
+            & i {
+                color: $white-color;
+            }
+        }
+    }
+}
+
+// charts
+
+.graphBox {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 3rem;
+    margin-top: 1rem;
+    min-height: 20rem;
+
+    & .box {
+        position: relative;
+        padding: 2rem;
+        width: 100%;
+        border-radius: 2rem;
+
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+
+        & canvas {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.detail {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 3rem;
+    margin-top: 1rem;
+
+    & .recentOrder {
+        position: relative;
+        padding: 2rem;
+        min-height: 50rem;
+
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 2rem;
+        background: $white-color;
+
+        & table {
+            & tbody tr {
+                color: $black-color;
+                font-size: 1.6em;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    background: $pink-color;
+                    color: $white-color;
+                }
+            }
+
+            & tr td {
+                padding: 1rem;
+
+                &:last-child {
+                    text-align: end;
+                }
+
+                &:nth-child(3) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+
+        & thead td {
+            font-weight: 600;
+            font-size: 1.8em;
+        }
+    }
+}
+
+.cardHeader {
+    @include flex(row, space-between, flex-start);
+
+    & h2 {
+        font-weight: 600;
+        font-size: 2.4em;
+        color: $pink-color;
+    }
+
+    & .ad-btn {
+        position: relative;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+
+        font-size: 1.6em;
+        color: $white-color;
+        background: $pink-color;
+    }
+}
+
+.status {
+    padding: 3px 5px;
+    color: $white-color;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &.edit {
+        background: #7bd02c;
+    }
+    &.delete {
+        background: #f00;
+        margin-left: 1rem;
+    }
+    &.Delivered {
+        background: #8ed02c;
+    }
+    &.Pending {
+        background: #f9ca3f;
+    }
+    &.Progress {
+        background: #1795ca;
+    }
+}
+
+.recentCustomers {
+    position: relative;
+
+    min-height: 50rem;
+    padding: 2rem;
+
+    border-radius: 2rem;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    background: $white-color;
+
+    & .imgBx {
+        position: relative;
+
+        @include size(4rem);
+        border-radius: 50%;
+        overflow: hidden;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include size(100%);
+            object-fit: cover;
+        }
+    }
+
+    & table tr:hover {
+        background: $pink-color;
+        color: $white-color;
+
+        & h4 span {
+            color: $white-color;
+        }
+    }
+
+    & table tr td {
+        padding: 1.2rem 1rem;
+
+        & h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.2em;
+
+            & span {
+                font-size: 1.4rem;
+                color: $black2-color;
+            }
+        }
+    }
+}

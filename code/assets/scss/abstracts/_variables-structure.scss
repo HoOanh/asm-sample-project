@@ -1,0 +1,33 @@
+// mobile first
+$breakpoints: (
+  tablet: 760,
+  pc: 1200,
+);
+
+$typography: (
+  normal: 1.5,
+);
+
+$color: (
+  _black: (
+    primary: #000,
+  ),
+  _white: (
+    primary: #fff,
+  ),
+  _grey: (
+    primary: #f5f5f5,
+  ),
+  _text: (
+    primary: #333,
+  ),
+  _brand: (
+    primary: #000,
+  ),
+  _black2: (
+    primary: #999,
+  ),
+  _pink: (
+    primary: #f45d96,
+  ),
+);

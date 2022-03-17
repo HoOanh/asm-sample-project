@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font: {
+    family: var(--font-family-normal);
+    size: 62.5%;
+  }
+  line-height: 1.27;
+
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0 1vw;
+  width: 100%;
+}
+
+.sub-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  color: #f45d96;
+}
+
+.main-title {
+  font-family: var(--font-family-title);
+  font-size: 4.2rem;
+  font-weight: 400;
+}
+
+.small-title {
+  font-family: var(--font-family-title);
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 100rem;
+
+  transition: all 0.3s ease;
+
+  & > * {
+    font-family: var(--font-family-sub);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+
+    color: $white-color;
+  }
+
+  &:hover {
+    transform: scaleX(110%);
+    opacity: 0.8;
+  }
+}
+
+.pink-btn {
+  background: #f45d96;
+}
+
+.sm-btn {
+  background: #f45d96;
+  border: none;
+  outline: none;
+  margin-right: 2rem;
+
+  color: $black-color;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.white-btn {
+  background: $white-color;
+
+  & > * {
+    color: $black-color;
+  }
+}
+
+.ft-content {
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  color: #444444;
+}

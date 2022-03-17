@@ -1,0 +1,147 @@
+.banner {
+    min-height: 100vh;
+
+    @include flex(column, center);
+
+    background-image: url(../images/banner/banner.jpg.webp);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    @include screen($bp-pc) {
+        min-height: 85vh;
+    }
+
+    &__title {
+        margin-left: 1rem;
+        max-width: 55rem;
+
+        @include screen($bp-pc) {
+            margin: 0;
+        }
+
+        & > * {
+            color: $black-color;
+        }
+    }
+}
+
+.benefit {
+    margin-top: 6rem;
+
+    &__item {
+        margin-top: 3rem;
+        display: flex;
+
+        @include screen($bp-pc) {
+            margin-top: 0;
+        }
+
+        &-content {
+            margin-left: 3rem;
+            @include screen($bp-pc) {
+                margin-left: 2.5rem;
+            }
+
+            & > p {
+                margin-top: 1rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.category {
+    margin-top: 7rem;
+
+    & .row {
+        grid-gap: 3.5rem;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        max-width: 23%;
+
+        @include flex(column, center, center);
+
+        &-content {
+            position: absolute;
+            left: 1.5rem;
+            right: 1.5rem;
+            bottom: 1.5rem;
+
+            padding: 1.5rem 0;
+            text-align: center;
+
+            background: $white-color;
+
+            & > p {
+                margin-top: 1rem;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.about {
+    margin-top: 10rem;
+
+    &__head {
+        @include flex(row, space-between);
+
+        &-title {
+            max-width: 44rem;
+        }
+
+        &-content {
+            max-width: 79rem;
+
+            & > p {
+                margin-top: 1rem;
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 5rem;
+
+        &-review {
+            position: relative;
+            overflow: hidden;
+
+            & > .play-btn {
+                @include centerAbsolute(both);
+
+                @include flex(row, center, center);
+
+                @include size(8rem);
+                border-radius: 50%;
+
+                font-size: 2.4rem;
+                color: #f45d96;
+                background: $white-color;
+            }
+        }
+
+        &-content {
+            @include flex(column, center, flex-start);
+
+            padding: 0 8rem;
+            margin-left: -12.5rem;
+
+            background: $white-color;
+            box-shadow: 0px 10px 30px rgba($color: #000000, $alpha: 0.1);
+
+            transform: translateY(-5rem);
+
+            & > p {
+                margin-bottom: 3rem;
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+}
